@@ -1,0 +1,97 @@
+.behind-dial-section {
+  padding: 100px 40px;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.behind-dial-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.dial-header .section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dial-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  max-width: 400px;
+}
+
+.read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #333333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.read-more-btn:hover {
+  background-color: var(--accent-orange);
+}
+
+.dial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 300px 200px;
+  gap: 20px;
+}
+
+.dial-image {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.dial-image:hover img {
+  transform: scale(1.05);
+}
+
+.img-wide {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.img-small:nth-of-type(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.img-small:nth-of-type(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.img-small:nth-of-type(4) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.img-tall {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
