@@ -412,6 +412,19 @@
   top: 100px;
 }
 
+.overview-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.content-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
 .cart-item {
   display: flex;
   background: white;
@@ -760,4 +773,88 @@
   font-size: 14px;
   color: #333;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  /* Tables */
+  .dashboard-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  /* Transit Panel */
+  .transit-expanded-panel {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px;
+  }
+
+  /* Checkout */
+  .checkout-layout {
+    flex-direction: column;
+  }
+  
+  .checkout-sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  /* Forms */
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Cards */
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Expanded Table details */
+  .expanded-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .product-thumb.large {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .counter-offer-section {
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .expanded-actions {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .action-right {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .action-right button, .btn-outline-danger {
+    width: 100%;
+  }
+
+  .info-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .banner-content p {
+    white-space: normal;
+  }
+
+  .overview-cards {
+    flex-direction: column;
+  }
 }

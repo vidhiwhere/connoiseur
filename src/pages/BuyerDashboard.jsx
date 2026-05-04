@@ -19,6 +19,8 @@ import {
   Search,
   Bell,
   ChevronLeft,
+  Menu,
+  X,
 } from "lucide-react";
 import Wishlist from "../components/buyer/Wishlist";
 import KYC from "../components/buyer/KYC";
@@ -28,7 +30,16 @@ import OrderConfirmed from "../components/buyer/OrderConfirmed";
 
 const BuyerDashboard = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -56,8 +67,12 @@ const BuyerDashboard = () => {
   return (
     <>
       <div className="buyer-dashboard">
-        {}
-        <aside className="buyer-sidebar">
+        {/* Mobile Sidebar Overlay */}
+        {isSidebarOpen && (
+          <div className="sidebar-overlay" onClick={closeSidebar}></div>
+        )}
+
+        <aside className={`buyer-sidebar ${isSidebarOpen ? "open" : ""}`}>
           <div className="sidebar-logo">
             <Link to="/">
               <img
@@ -79,7 +94,7 @@ const BuyerDashboard = () => {
           <nav className="sidebar-nav">
             <div
               className={`nav-item ${activeTab === "Dashboard" ? "active" : ""}`}
-              onClick={() => setActiveTab("Dashboard")}
+              onClick={() => { setActiveTab("Dashboard"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <LayoutDashboard size={20} strokeWidth={1.5} />
@@ -88,7 +103,7 @@ const BuyerDashboard = () => {
             </div>
             <div
               className={`nav-item ${activeTab === "My Offers" ? "active" : ""}`}
-              onClick={() => setActiveTab("My Offers")}
+              onClick={() => { setActiveTab("My Offers"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <Handshake size={20} strokeWidth={1.5} />
@@ -97,7 +112,7 @@ const BuyerDashboard = () => {
             </div>
             <div
               className={`nav-item ${activeTab === "Order History" ? "active" : ""}`}
-              onClick={() => setActiveTab("Order History")}
+              onClick={() => { setActiveTab("Order History"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <Package size={20} strokeWidth={1.5} />
@@ -106,7 +121,7 @@ const BuyerDashboard = () => {
             </div>
             <div
               className={`nav-item ${activeTab === "Wishlist" ? "active" : ""}`}
-              onClick={() => setActiveTab("Wishlist")}
+              onClick={() => { setActiveTab("Wishlist"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <Heart size={20} strokeWidth={1.5} />
@@ -115,7 +130,7 @@ const BuyerDashboard = () => {
             </div>
             <div
               className={`nav-item ${activeTab === "KYC" ? "active" : ""}`}
-              onClick={() => setActiveTab("KYC")}
+              onClick={() => { setActiveTab("KYC"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <ShieldCheck size={20} strokeWidth={1.5} />
@@ -124,7 +139,7 @@ const BuyerDashboard = () => {
             </div>
             <div
               className={`nav-item ${activeTab === "Cart" ? "active" : ""}`}
-              onClick={() => setActiveTab("Cart")}
+              onClick={() => { setActiveTab("Cart"); closeSidebar(); }}
             >
               <span className="nav-icon">
                 <ShoppingCart size={20} strokeWidth={1.5} />
@@ -155,10 +170,11 @@ const BuyerDashboard = () => {
           </nav>
         </aside>
 
-        {}
         <main className="buyer-main">
-          {}
           <header className="buyer-topbar">
+            <button className="mobile-menu-btn dashboard-menu-btn" onClick={toggleSidebar}>
+              <Menu size={24} color="#1a1a1a" />
+            </button>
             <div className="topbar-search">
               <span className="search-icon">
                 <Search size={16} strokeWidth={2} />

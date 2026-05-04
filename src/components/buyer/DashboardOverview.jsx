@@ -8,7 +8,7 @@ const DashboardOverview = ({ setActiveTab }) => {
         <h1>Good Morning, Arjun</h1>
       </div>
 
-      <div style={{ display: "flex", gap: "24px" }}>
+      <div className="overview-cards">
         {}
         <div className="content-card" style={{ flex: 1 }}>
           <div className="card-header">

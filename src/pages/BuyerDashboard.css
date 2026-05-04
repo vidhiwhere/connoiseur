@@ -18,6 +18,28 @@
   height: 100vh;
   overflow-y: auto;
   flex-shrink: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+.dashboard-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 16px;
 }
 
 .sidebar-logo a {
@@ -372,4 +394,43 @@
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .buyer-sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+  }
+
+  .buyer-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .dashboard-menu-btn {
+    display: block;
+  }
+
+  .buyer-topbar {
+    padding: 15px 20px;
+  }
+
+  .topbar-search {
+    display: none; /* Hide search on mobile to save space, or stack it */
+  }
+
+  .buyer-content {
+    padding: 20px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .switch-seller-btn {
+    display: none; /* Hide on mobile to save space */
+  }
 }
