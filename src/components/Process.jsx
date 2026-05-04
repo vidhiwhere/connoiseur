@@ -84,8 +84,10 @@ const Process = () => {
             {steps.map((step, index) => (
               <div key={index} className="timeline-step">
                 <div className="step-number">{step.id}</div>
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-desc">{step.desc}</p>
+                <div className="step-content">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-desc">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>

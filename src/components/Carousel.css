@@ -31,6 +31,29 @@
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+    padding-bottom: 20px; /* space for scrollbar */
+  }
+
+  .watch-card {
+    min-width: 80vw; /* Show 1 card mostly with a peek at the next */
+    scroll-snap-align: center;
+  }
+
+  .carousel-btn {
+    display: none; /* Hide buttons on mobile, rely on swipe/scroll */
+  }
+}
+
 .watch-card {
   flex: 1;
   min-width: 0;
