@@ -42,168 +42,170 @@ const MyOffers = () => {
           </div>
         </div>
 
-        <table className="dashboard-table offers-table">
-          <thead>
-            <tr>
-              <th>Product Thumbnail</th>
-              <th>Watch</th>
-              <th>Notified Date</th>
-              <th>Asking Price</th>
-              <th>Offered Price</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {}
-            <tr className="compact-row">
-              <td className="product-cell">
-                <div className="product-thumb"></div>
-              </td>
-              <td>
-                <p>
-                  <strong>Rolex</strong> Skydweller
-                </p>
-                <span>M336934-0002</span>
-              </td>
-              <td>xx-xx-xxxx</td>
-              <td>₹27,00,000</td>
-              <td>02-02-2026</td>
-              <td>
-                <span className="status-badge status-awaiting">New</span>
-              </td>
-              <td>
-                <span className="expand-icon">
-                  <ChevronDown size={16} strokeWidth={2} />
-                </span>
-              </td>
-            </tr>
+        <div className="table-responsive">
+          <table className="dashboard-table offers-table">
+            <thead>
+              <tr>
+                <th>Product Thumbnail</th>
+                <th>Watch</th>
+                <th>Notified Date</th>
+                <th>Asking Price</th>
+                <th>Offered Price</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* ... rows ... */}
+              <tr className="compact-row">
+                <td className="product-cell">
+                  <div className="product-thumb"></div>
+                </td>
+                <td>
+                  <p>
+                    <strong>Rolex</strong> Skydweller
+                  </p>
+                  <span>M336934-0002</span>
+                </td>
+                <td>xx-xx-xxxx</td>
+                <td>₹27,00,000</td>
+                <td>02-02-2026</td>
+                <td>
+                  <span className="status-badge status-awaiting">New</span>
+                </td>
+                <td>
+                  <span className="expand-icon">
+                    <ChevronDown size={16} strokeWidth={2} />
+                  </span>
+                </td>
+              </tr>
 
-            {}
-            <tr
-              className={`expandable-row ${expandedOffer === 2 ? "expanded" : ""}`}
-              onClick={() => setExpandedOffer(2)}
-            >
-              <td colSpan="7">
-                <div className="expanded-content">
-                  <div className="expanded-top">
-                    <div className="product-thumb large"></div>
-                    <div className="expanded-details">
-                      <p>
-                        <strong>Rolex</strong>
-                      </p>
-                      <p className="watch-name">
-                        Skydweller <span>M336934-0002</span>
-                      </p>
-                      <p className="asking-price">Asking Price : ₹ 18,50,000</p>
-                      <p className="your-offer">
-                        Your Offer Price : ₹ 16,00,000
-                      </p>
+              {/* ... */}
+              <tr
+                className={`expandable-row ${expandedOffer === 2 ? "expanded" : ""}`}
+                onClick={() => setExpandedOffer(2)}
+              >
+                <td colSpan="7">
+                  <div className="expanded-content">
+                    <div className="expanded-top">
+                      <div className="product-thumb large"></div>
+                      <div className="expanded-details">
+                        <p>
+                          <strong>Rolex</strong>
+                        </p>
+                        <p className="watch-name">
+                          Skydweller <span>M336934-0002</span>
+                        </p>
+                        <p className="asking-price">Asking Price : ₹ 18,50,000</p>
+                        <p className="your-offer">
+                          Your Offer Price : ₹ 16,00,000
+                        </p>
+                      </div>
+                      <div className="counter-offer-section">
+                        <p>COUNTER OFFER PRICE</p>
+                        <h2>₹ 17,00,000</h2>
+                      </div>
+                      <div className="expand-icon-top">
+                        <ChevronUp size={20} strokeWidth={2} />
+                      </div>
                     </div>
-                    <div className="counter-offer-section">
-                      <p>COUNTER OFFER PRICE</p>
-                      <h2>₹ 17,00,000</h2>
-                    </div>
-                    <div className="expand-icon-top">
-                      <ChevronUp size={20} strokeWidth={2} />
+                    <div className="expanded-actions">
+                      <button className="btn-outline-danger">Reject</button>
+                      <div className="action-right">
+                        <button className="btn-secondary">Counter</button>
+                        <button className="btn-primary">Accept Offer</button>
+                      </div>
                     </div>
                   </div>
-                  <div className="expanded-actions">
-                    <button className="btn-outline-danger">Reject</button>
-                    <div className="action-right">
-                      <button className="btn-secondary">Counter</button>
-                      <button className="btn-primary">Accept Offer</button>
+                </td>
+              </tr>
+
+              {/* ... */}
+              <tr className="compact-row">
+                <td className="product-cell">
+                  <div className="product-thumb"></div>
+                </td>
+                <td>
+                  <p>
+                    <strong>Rolex</strong> Skydweller
+                  </p>
+                  <span>M336934-0002</span>
+                </td>
+                <td>xx-xx-xxxx</td>
+                <td>₹27,00,000</td>
+                <td>02-02-2026</td>
+                <td>
+                  <span className="status-badge status-rejected">Rejected</span>
+                </td>
+                <td>
+                  <span className="expand-icon">
+                    <ChevronDown size={16} strokeWidth={2} />
+                  </span>
+                </td>
+              </tr>
+
+              {/* ... */}
+              <tr className="expandable-row expanded">
+                <td colSpan="7">
+                  <div className="expanded-content">
+                    <div className="expanded-top">
+                      <div className="product-thumb large"></div>
+                      <div className="expanded-details">
+                        <p>
+                          <strong>Rolex</strong>
+                        </p>
+                        <p className="watch-name">
+                          Skydweller <span>M336934-0002</span>
+                        </p>
+                        <p className="asking-price">Asking Price : ₹ 18,50,000</p>
+                        <p className="your-offer">
+                          Your Offer Price : ₹ 16,00,000
+                        </p>
+                      </div>
+                      <div className="counter-offer-section">
+                        <p>FINAL PRICE</p>
+                        <h2>₹ 16,00,000</h2>
+                      </div>
+                      <div className="expand-icon-top">∧</div>
+                    </div>
+                    <div className="expanded-actions waiting-seller">
+                      <div className="warning-banner">
+                        The seller is now reviewing the price. Once they confirm,
+                        you will be notified and checkout will be unlocked.
+                      </div>
+                      <div className="action-right">
+                        <button className="btn-secondary">View Product</button>
+                        <button className="btn-disabled">Under Review</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            {}
-            <tr className="compact-row">
-              <td className="product-cell">
-                <div className="product-thumb"></div>
-              </td>
-              <td>
-                <p>
-                  <strong>Rolex</strong> Skydweller
-                </p>
-                <span>M336934-0002</span>
-              </td>
-              <td>xx-xx-xxxx</td>
-              <td>₹27,00,000</td>
-              <td>02-02-2026</td>
-              <td>
-                <span className="status-badge status-rejected">Rejected</span>
-              </td>
-              <td>
-                <span className="expand-icon">
-                  <ChevronDown size={16} strokeWidth={2} />
-                </span>
-              </td>
-            </tr>
-
-            {}
-            <tr className="expandable-row expanded">
-              <td colSpan="7">
-                <div className="expanded-content">
-                  <div className="expanded-top">
-                    <div className="product-thumb large"></div>
-                    <div className="expanded-details">
-                      <p>
-                        <strong>Rolex</strong>
-                      </p>
-                      <p className="watch-name">
-                        Skydweller <span>M336934-0002</span>
-                      </p>
-                      <p className="asking-price">Asking Price : ₹ 18,50,000</p>
-                      <p className="your-offer">
-                        Your Offer Price : ₹ 16,00,000
-                      </p>
-                    </div>
-                    <div className="counter-offer-section">
-                      <p>FINAL PRICE</p>
-                      <h2>₹ 16,00,000</h2>
-                    </div>
-                    <div className="expand-icon-top">∧</div>
-                  </div>
-                  <div className="expanded-actions waiting-seller">
-                    <div className="warning-banner">
-                      The seller is now reviewing the price. Once they confirm,
-                      you will be notified and checkout will be unlocked.
-                    </div>
-                    <div className="action-right">
-                      <button className="btn-secondary">View Product</button>
-                      <button className="btn-disabled">Under Review</button>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-            {}
-            <tr className="compact-row">
-              <td className="product-cell">
-                <div className="product-thumb"></div>
-              </td>
-              <td>
-                <p>
-                  <strong>Rolex</strong> Skydweller
-                </p>
-                <span>M336934-0002</span>
-              </td>
-              <td>xx-xx-xxxx</td>
-              <td>₹27,00,000</td>
-              <td>02-02-2026</td>
-              <td>
-                <span className="status-badge status-accepted">Accepted</span>
-              </td>
-              <td>
-                <span className="expand-icon">∨</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              {/* ... */}
+              <tr className="compact-row">
+                <td className="product-cell">
+                  <div className="product-thumb"></div>
+                </td>
+                <td>
+                  <p>
+                    <strong>Rolex</strong> Skydweller
+                  </p>
+                  <span>M336934-0002</span>
+                </td>
+                <td>xx-xx-xxxx</td>
+                <td>₹27,00,000</td>
+                <td>02-02-2026</td>
+                <td>
+                  <span className="status-badge status-accepted">Accepted</span>
+                </td>
+                <td>
+                  <span className="expand-icon">∨</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

@@ -170,53 +170,55 @@ const OrderHistory = () => {
           </div>
         </div>
 
-        <table className="dashboard-table offers-table">
-          <thead>
-            <tr>
-              <th>Product Thumbnail</th>
-              <th>Watch</th>
-              <th>Reference</th>
-              <th>Final Price</th>
-              <th>Notified Date</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {[1, 2, 3].map((i) => (
-              <tr className="compact-row" key={i}>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                </td>
-                <td>
-                  <p>
-                    <strong>Rolex</strong> Skydweller
-                  </p>
-                  <span>M336934-0002</span>
-                </td>
-                <td>xxxxxxxxxx</td>
-                <td>₹27,00,000</td>
-                <td>02-02-2026</td>
-                <td>
-                  <span className="status-badge status-delivered">
-                    <Circle
-                      size={10}
-                      fill="currentColor"
-                      strokeWidth={0}
-                      style={{ marginRight: "4px", verticalAlign: "middle" }}
-                    />{" "}
-                    Delivered
-                  </span>
-                </td>
-                <td>
-                  <span className="expand-icon">
-                    <ChevronDown size={16} strokeWidth={2} />
-                  </span>
-                </td>
+        <div className="table-responsive">
+          <table className="dashboard-table offers-table">
+            <thead>
+              <tr>
+                <th>Product Thumbnail</th>
+                <th>Watch</th>
+                <th>Reference</th>
+                <th>Final Price</th>
+                <th>Notified Date</th>
+                <th>Status</th>
+                <th></th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {[1, 2, 3].map((i) => (
+                <tr className="compact-row" key={i}>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                  </td>
+                  <td>
+                    <p>
+                      <strong>Rolex</strong> Skydweller
+                    </p>
+                    <span>M336934-0002</span>
+                  </td>
+                  <td>xxxxxxxxxx</td>
+                  <td>₹27,00,000</td>
+                  <td>02-02-2026</td>
+                  <td>
+                    <span className="status-badge status-delivered">
+                      <Circle
+                        size={10}
+                        fill="currentColor"
+                        strokeWidth={0}
+                        style={{ marginRight: "4px", verticalAlign: "middle" }}
+                      />{" "}
+                      Delivered
+                    </span>
+                  </td>
+                  <td>
+                    <span className="expand-icon">
+                      <ChevronDown size={16} strokeWidth={2} />
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

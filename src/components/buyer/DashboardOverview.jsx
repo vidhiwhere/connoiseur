@@ -20,53 +20,55 @@ const DashboardOverview = ({ setActiveTab }) => {
               View All
             </button>
           </div>
-          <table className="dashboard-table">
-            <tbody>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-awaiting">
-                    Awaiting Action
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-review">
-                    Under Review
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-rejected">Rejected</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="dashboard-table">
+              <tbody>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-awaiting">
+                      Awaiting Action
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-review">
+                      Under Review
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-rejected">Rejected</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {}
@@ -80,55 +82,57 @@ const DashboardOverview = ({ setActiveTab }) => {
               View All
             </button>
           </div>
-          <table className="dashboard-table">
-            <tbody>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-transit">
-                    In Transit
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-delivered">
-                    Delivered
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td className="product-cell">
-                  <div className="product-thumb"></div>
-                  <div className="product-info">
-                    <p>Rolex Sky dweller</p>
-                    <span>M336934-0002</span>
-                  </div>
-                </td>
-                <td style={{ fontWeight: 600 }}>₹27,00,000</td>
-                <td>
-                  <span className="status-badge status-delivered">
-                    Delivered
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="dashboard-table">
+              <tbody>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-transit">
+                      In Transit
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-delivered">
+                      Delivered
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="product-cell">
+                    <div className="product-thumb"></div>
+                    <div className="product-info">
+                      <p>Rolex Sky dweller</p>
+                      <span>M336934-0002</span>
+                    </div>
+                  </td>
+                  <td style={{ fontWeight: 600 }}>₹27,00,000</td>
+                  <td>
+                    <span className="status-badge status-delivered">
+                      Delivered
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

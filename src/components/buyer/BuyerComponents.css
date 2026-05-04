@@ -777,15 +777,21 @@
 
 @media (max-width: 768px) {
   /* Tables */
-  .dashboard-table {
-    display: block;
+  .table-responsive {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
+    margin-bottom: 16px;
   }
 
-  /* Transit Panel */
+  .dashboard-table {
+    min-width: 800px; /* Force table to be wider than screen on mobile */
+  }
+
+  /* Fix for horizontal tables clipping */
+  .dashboard-table th, .dashboard-table td {
+    min-width: auto;
+  }
   .transit-expanded-panel {
     flex-direction: column;
     gap: 32px;
@@ -814,6 +820,13 @@
   }
 
   /* Expanded Table details */
+  .expanded-content {
+    position: sticky;
+    left: 0;
+    width: calc(100vw - 90px); /* Account for outer padding */
+    box-sizing: border-box;
+  }
+
   .expanded-top {
     flex-direction: column;
     gap: 16px;
@@ -831,17 +844,21 @@
 
   .expanded-actions {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     align-items: stretch;
   }
 
   .action-right {
     flex-direction: column;
+    gap: 12px;
     width: 100%;
   }
 
   .action-right button, .btn-outline-danger {
     width: 100%;
+    font-size: 13px; /* Slightly smaller font */
+    padding: 12px; /* Adjust padding */
+    white-space: normal; /* Allow text wrap if absolutely necessary */
   }
 
   .info-banner {
@@ -856,5 +873,22 @@
 
   .overview-cards {
     flex-direction: column;
+  }
+
+  /* Fix for horizontal tables clipping */
+  .dashboard-table th, .dashboard-table td {
+    min-width: 120px; /* Ensure columns don't shrink too much */
+  }
+
+  /* Fix for In Transit Card text cramping */
+  .transit-summary-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .transit-meta {
+    line-height: 1.4;
+    white-space: normal; /* Allow text to wrap nicely */
   }
 }
